@@ -10,22 +10,22 @@ build b:
 	go build -o $(PROG)
 
 run r:
-	@echo "make (run) [signal|prog]"
+	@echo "make (run) [signal|proxy]"
 
 run-signal rs:
 	centrifugo -c config.centrifugo.test.json &
 
-run-prog rp:
-	./$(PROG) -signal=localhost -secret=secret -as=<PEER_ID> -upstreamAddr=localhost:8000
-	./$(PROG) -signal=localhost -secret=secret -to=<PEER_ID> -listen=:4444
+run-proxy rp:
+	./$(PROG) -signal=localhost -secret=secret -as=asid -upstreamAddr=localhost:8000
+	./$(PROG) -signal=localhost -secret=secret -to=toid -listen=:4444
 
 kill k:
-	@echo "make (kill) [signal|prog]"
+	@echo "make (kill) [signal|proxy]"
 
 kill-signal ks:
 	pkill centrifugo
 
-kill-prog kp:
+kill-proxy kp:
 	pkill $(PROG) 
 
 #----------------------------------------------------------------------------------
