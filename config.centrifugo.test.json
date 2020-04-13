@@ -1,5 +1,5 @@
 {
-  "secret": "secret",
+  "token_hmac_secret_key": "secret",
   "publish": true,
   "join_leave": true,
   "history_size": 10,
