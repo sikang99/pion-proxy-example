@@ -1,7 +1,7 @@
 ## pion-proxy-example
 
 
-### [Usage](./README.md) : Original README
+### [Usage](./USAGE.md) : Original README
 
 
 ### Changelog
